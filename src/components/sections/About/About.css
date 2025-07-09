@@ -1,0 +1,177 @@
+.about {
+    background-color: #202020;
+    color: white;
+    padding: 120px 0;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    overflow: visible;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.about-cta-button {
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
+}
+
+.about-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+}
+
+.about-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+}
+
+.about-image::before,
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: url('/assets/images/stroke-nksv-portrait.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.about-image::before {
+    left: -200px;
+    transform: translateX(-65%);
+}
+
+.about-image::after {
+    right: -200px;
+    transform: translateX(65%);
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.telegram-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        position: relative;
+    }
+
+    .about-image {
+        width: 70%;
+        order: -1;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .portrait {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        display: block;
+    }
+
+    .about-image::before,
+    .about-image::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: url('/assets/images/stroke-nksv-portrait.png') no-repeat center;
+        background-size: contain;
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    .about-image::before {
+        left: -20px;
+    }
+
+    .about-image::after {
+        right: -20px;
+    }
+
+    .about-content::before,
+    .about-content::after {
+        display: none;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .about-cta-button {
+        align-self: center;
+    }
+}
