@@ -1,53 +1,92 @@
 .projects {
-    background-color: white;
-    border-radius: 60px 60px 0 0;
-    padding: 80px 0;
-    margin-top: -60px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+    padding: var(--spacing-3xl) 0;
+    margin-top: -var(--border-radius-xl);
     position: relative;
     z-index: 1;
 }
 
 .projects-content {
-    max-width: 1400px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--container-padding);
 }
 
 .projects-title {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
     text-align: center;
-    margin-bottom: 60px;
-    color: #202020;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-dark);
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    gap: var(--spacing-lg);
 }
 
 .project-card {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--color-light-gray);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-fast);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-heavy);
 }
 
 .project-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #202020;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-dark);
+    font-weight: var(--font-weight-semibold);
 }
 
 .project-card p {
-    font-size: 16px;
+    font-size: var(--font-size-sm);
     line-height: 1.6;
-    color: #666;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.project-tech {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    padding: 4px var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-link {
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-fast);
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
 }

@@ -1,19 +1,19 @@
 .about {
-    background-color: #202020;
-    color: white;
-    padding: 120px 0;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--spacing-4xl) 0 var(--spacing-xl) 0;
     max-height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .about-content {
-    max-width: 1400px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--container-padding);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: var(--spacing-3xl);
     align-items: center;
     text-align: left;
     position: relative;
@@ -23,43 +23,48 @@
 .about-text {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--spacing-lg);
     text-align: left;
 }
 
 .about-title {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
     margin: 0;
-    color: white;
+    color: var(--color-white);
+    font-family: inherit;
 }
 
 .about-description {
-    font-size: 18px;
+    font-size: var(--font-size-md);
     line-height: 1.6;
-    color: #e0e0e0;
+    color: var(--color-text-light);
     margin: 0;
+    font-family: inherit;
 }
 
 .about-cta-button {
-    background: linear-gradient(135deg, #4A90E2, #357ABD);
-    color: white;
+    background: var(--gradient-primary);
+    color: var(--color-white);
     border: none;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 18px 60px;
+    border-radius: var(--border-radius-lg);
+    font-size: 22px;
+    font-weight: var(--font-weight-semibold);
     cursor: pointer;
+    align-self: flex-start;
+    transition: var(--transition-fast);
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: fit-content;
+    gap: var(--spacing-sm);
+    min-height: 75px;
+    white-space: nowrap;
+    font-family: inherit;
 }
 
 .about-cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+    box-shadow: var(--shadow-primary);
 }
 
 .about-image {
@@ -106,8 +111,9 @@
 }
 
 .telegram-icon {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {

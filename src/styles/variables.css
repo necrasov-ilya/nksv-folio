@@ -1,0 +1,66 @@
+:root {
+  /* Цвета */
+  --color-primary: #4A90E2;
+  --color-primary-dark: #357ABD;
+  --color-dark: #202020;
+  --color-white: #ffffff;
+  --color-light-gray: #f8f9fa;
+  --color-medium-gray: #f5f5f5;
+  --color-text-light: #e0e0e0;
+
+  /* Шрифты */
+  --font-family-primary: 'OpenRunde', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Размеры шрифтов */
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 24px;
+  --font-size-xl: 48px;
+
+  /* Интервалы */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 60px;
+  --spacing-3xl: 80px;
+  --spacing-4xl: 120px;
+
+  /* Радиусы скругления */
+  --border-radius-sm: 8px;
+  --border-radius-md: 20px;
+  --border-radius-lg: 50px;
+  --border-radius-xl: 60px;
+
+  /* Тени */
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
+  --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.15);
+  --shadow-primary: 0 8px 25px rgba(74, 144, 226, 0.4);
+
+  /* Переходы */
+  --transition-fast: 0.3s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Размеры контейнера */
+  --container-max-width: 1400px;
+  --container-padding: var(--spacing-xl);
+
+  /* Z-index */
+  --z-index-header: 1000;
+  --z-index-mobile-menu: 1001;
+
+  /* Градиенты */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+
+  /* Высота элементов */
+  --header-logo-height: 45px;
+  --mobile-button-size: 64px;
+}
+
