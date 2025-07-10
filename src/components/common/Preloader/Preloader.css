@@ -1,0 +1,182 @@
+/* Основной контейнер прелоадера */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  overflow: hidden;
+}
+
+.preloader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+
+.logo-animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nksv-logo {
+  width: 200px;
+  height: auto;
+  opacity: 0;
+  animation: logoAppear 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes logoAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo-element {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: drawElement 1.2s ease-out forwards;
+}
+
+@keyframes drawElement {
+  0% {
+    stroke-dashoffset: 1200;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.logo-element--left-circle {
+  animation-delay: 1s;
+}
+
+.logo-element--left-long {
+  animation-delay: 1.2s;
+}
+
+.logo-element--right-long {
+  animation-delay: 1.4s;
+}
+
+.logo-element--right-circle {
+  animation-delay: 1.6s;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  animation: progressAppear 0.5s ease-out 3s forwards;
+}
+
+@keyframes progressAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.progress-bar {
+  width: 280px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 1px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 25px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: progressShine 1.5s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% {
+    left: -25px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.progress-text {
+  color: var(--color-white);
+  font-family: var(--font-family-primary);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .nksv-logo {
+    width: 150px;
+  }
+
+  .progress-bar {
+    width: 250px;
+  }
+
+  .preloader__content {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nksv-logo {
+    width: 120px;
+  }
+
+  .progress-bar {
+    width: 200px;
+  }
+
+  .progress-text {
+    font-size: 14px;
+  }
+}

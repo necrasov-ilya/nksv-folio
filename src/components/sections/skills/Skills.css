@@ -1,0 +1,362 @@
+.skills {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+    border-radius: 60px 60px 0 0;
+}
+
+.skills-title {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    color: #1a202c;
+    letter-spacing: -0.02em;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.skills-title::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 1px;
+    transform: translateX(-50%) scaleX(0);
+    animation: expandWidthCenter 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes expandWidthCenter {
+    0% { transform: translateX(-50%) scaleX(0); }
+    100% { transform: translateX(-50%) scaleX(1); }
+}
+
+.skills-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 180px 180px;
+    gap: var(--spacing-md);
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.photography-card,
+.design-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        0 2px 16px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    transform-origin: center;
+}
+
+.photography-card {
+    animation: slideInLeft 0.6s ease-out 0.4s both;
+}
+
+.design-card {
+    animation: slideInLeft 0.6s ease-out 0.5s both;
+}
+
+.frontend-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        0 4px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    animation: slideInRight 0.6s ease-out 0.6s both;
+    transform-origin: center;
+}
+
+.skill-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(1.1) contrast(1.05) saturate(1.1);
+}
+
+.skill-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.skill-title {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: var(--spacing-lg);
+    right: var(--spacing-lg);
+    color: white;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: var(--font-weight-bold);
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.9),
+        0 1px 4px rgba(0, 0, 0, 1),
+        0 0 20px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.skill-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 4;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.95) 0%,
+        rgba(30, 41, 59, 0.95) 50%,
+        rgba(15, 23, 42, 0.95) 100%
+    );
+    backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+    overflow: hidden;
+}
+
+.skill-description h3 {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.skill-description p {
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.photography-card:hover,
+.design-card:hover,
+.frontend-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.photography-card:hover {
+    box-shadow:
+        0 20px 60px rgba(102, 126, 234, 0.4),
+        0 8px 30px rgba(102, 126, 234, 0.2);
+}
+
+.design-card:hover {
+    box-shadow:
+        0 20px 60px rgba(236, 72, 153, 0.4),
+        0 8px 30px rgba(236, 72, 153, 0.2);
+}
+
+.frontend-card:hover {
+    box-shadow:
+        0 20px 60px rgba(59, 130, 246, 0.4),
+        0 8px 30px rgba(59, 130, 246, 0.2);
+}
+
+.photography-card:hover .skill-bg,
+.design-card:hover .skill-bg,
+.frontend-card:hover .skill-bg {
+    transform: scale(1.1) rotate(1deg);
+    filter: brightness(0.8) contrast(1.2) saturate(1.3);
+}
+
+.photography-card:hover .skill-overlay,
+.design-card:hover .skill-overlay,
+.frontend-card:hover .skill-overlay {
+    opacity: 1;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+}
+
+.photography-card:hover .skill-description,
+.design-card:hover .skill-description,
+.frontend-card:hover .skill-description {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.photography-card:hover .skill-title,
+.design-card:hover .skill-title,
+.frontend-card:hover .skill-title {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: repeat(2, 160px);
+    }
+
+    .skill-description {
+        padding: var(--spacing-md);
+    }
+
+    .skill-description h3 {
+        font-size: 1.2rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .skill-description p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        -webkit-line-clamp: 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 200px);
+        gap: var(--spacing-sm);
+    }
+
+    .frontend-card {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .skill-description {
+        padding: var(--spacing-md);
+    }
+
+    .skill-description h3 {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .skill-description p {
+        -webkit-line-clamp: 5;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-rows: repeat(3, 180px);
+    }
+
+    .skill-title {
+        font-size: 1.1rem;
+        bottom: var(--spacing-md);
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+
+    .skill-description {
+        padding: var(--spacing-sm);
+    }
+
+    .skill-description h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .skill-description p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        -webkit-line-clamp: 4;
+    }
+}
