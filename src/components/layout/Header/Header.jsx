@@ -13,14 +13,14 @@ const Header = () => {
             <header className="header">
                 <div className="header-content">
                     <div className="logo-section">
-                        <img src="/assets/svg/black-nksv-logo.svg" alt="NKSV Logo" className="logo" />
+                        <img src="/assets/svg/dark-nksv-logo.svg" alt="NKSV Logo" className="logo" />
                         <span className="brand-name">NKSV_ILYA</span>
                     </div>
                     <nav className="nav-section">
-                        <button className="nav-button">Главная</button>
-                        <button className="nav-button">Обо мне</button>
-                        <button className="nav-button">Проекты</button>
-                        <button className="nav-button">Контакты</button>
+                        <a href="#home" className="nav-link">Главная</a>
+                        <a href="#about" className="nav-link">Обо мне</a>
+                        <a href="#projects" className="nav-link">Проекты</a>
+                        <a href="#contact" className="nav-link">Контакты</a>
                         <button className="cta-button">
                             <img src="/assets/svg/telegram-logo.svg" alt="Telegram" className="telegram-icon" />
                             Связаться со мной
@@ -45,10 +45,10 @@ const Header = () => {
             {/* Мобильное меню */}
             <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-content">
-                    <button className="mobile-nav-button" onClick={toggleMobileMenu}>Главная</button>
-                    <button className="mobile-nav-button" onClick={toggleMobileMenu}>Обо мне</button>
-                    <button className="mobile-nav-button" onClick={toggleMobileMenu}>Проекты</button>
-                    <button className="mobile-nav-button" onClick={toggleMobileMenu}>Контакты</button>
+                    <a href="#home" className="mobile-nav-link" onClick={toggleMobileMenu}>Главная</a>
+                    <a href="#about" className="mobile-nav-link" onClick={toggleMobileMenu}>Обо мне</a>
+                    <a href="#projects" className="mobile-nav-link" onClick={toggleMobileMenu}>Проекты</a>
+                    <a href="#contact" className="mobile-nav-link" onClick={toggleMobileMenu}>Контакты</a>
                     <button className="mobile-cta-button" onClick={toggleMobileMenu}>
                         <img src="/assets/svg/telegram-logo.svg" alt="Telegram" className="telegram-icon" />
                         Связаться со мной

@@ -1,11 +1,13 @@
 :root {
   /* Цвета */
   --color-primary: #4A90E2;
+  --color-primary-light: #deedff;
   --color-primary-dark: #357ABD;
   --color-dark: #202020;
+  --color-black: #1a1a1a;
   --color-white: #ffffff;
-  --color-light-gray: #f8f9fa;
-  --color-medium-gray: #f5f5f5;
+  --color-light-gray: #F1F1F1;
+  --color-medium-gray: #cfcfcf;
   --color-text-light: #e0e0e0;
 
   /* Шрифты */
@@ -20,6 +22,7 @@
   --font-size-sm: 16px;
   --font-size-md: 18px;
   --font-size-lg: 24px;
+  --font-size-xlg: 32px;
   --font-size-xl: 48px;
 
   /* Интервалы */
@@ -33,15 +36,17 @@
   --spacing-4xl: 120px;
 
   /* Радиусы скругления */
-  --border-radius-sm: 8px;
+  --border-radius-xs: 8px;
+  --border-radius-sm: 12px;
   --border-radius-md: 20px;
+  --border-radius-xlg: 30px;
   --border-radius-lg: 50px;
   --border-radius-xl: 60px;
 
   /* Тени */
-  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
-  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
-  --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.15);
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.10);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.20);
+  --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.35);
   --shadow-primary: 0 8px 25px rgba(74, 144, 226, 0.4);
 
   /* Переходы */
@@ -60,7 +65,6 @@
   --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
 
   /* Высота элементов */
-  --header-logo-height: 45px;
+  --header-logo-height: 50px;
   --mobile-button-size: 64px;
 }
-

@@ -1,6 +1,6 @@
 .skills {
-    padding: var(--spacing-lg) var(--spacing-md);
-    background: #f8fafc;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background: var(--color-light-gray);
     position: relative;
     overflow: hidden;
     border-radius: 60px 60px 0 0;
@@ -35,14 +35,14 @@
 }
 
 .skills-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 400px 1fr;
     grid-template-rows: 180px 180px;
     gap: var(--spacing-md);
     animation: fadeInUp 0.6s ease-out 0.3s both;
@@ -127,6 +127,7 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.5px;
     line-height: 1.2;
+    display: none;
 }
 
 .skill-description {
