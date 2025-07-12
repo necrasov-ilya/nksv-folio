@@ -1,6 +1,6 @@
 .skills {
     padding: var(--spacing-xl) var(--spacing-md);
-    background: var(--color-light-gray);
+    background: var(--color-white);
     position: relative;
     overflow: hidden;
     border-radius: 60px 60px 0 0;
@@ -90,6 +90,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    user-select: none;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     filter: brightness(1.1) contrast(1.05) saturate(1.1);
 }

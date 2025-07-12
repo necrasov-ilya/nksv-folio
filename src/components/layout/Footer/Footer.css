@@ -35,6 +35,7 @@
 .footer-logo-section {
     display: flex;
     align-items: center;
+    user-select: none;
     gap: var(--spacing-sm);
 }
 
@@ -64,30 +65,41 @@
 
 .footer-link {
     color: var(--color-text-light);
+    user-select: none;
     text-decoration: none;
     font-size: var(--font-size-md);
-    padding: var(--spacing-xs) 0;
+    padding: var(--spacing-xs) var(--spacing-sm);
     transition: var(--transition-fast);
     position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-sm);
 }
 
-.footer-link::after {
+.footer-link::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color-white);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.footer-link:hover::before {
     left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--color-primary);
-    transition: var(--transition-fast);
 }
 
 .footer-link:hover {
-    color: var(--color-primary);
+    color: var(--color-dark);
+    border-color: var(--color-white);
 }
 
-.footer-link:hover::after {
-    width: 100%;
+.footer-link span {
+    position: relative;
+    z-index: 2;
 }
 
 /* Группа действий - кнопка и статус */
@@ -99,11 +111,11 @@
 }
 
 .footer-contact-btn {
-    background: var(--gradient-primary);
+    background: transparent;
     color: var(--color-white);
-    border: none;
+    border: 2px solid var(--color-white);
     padding: 12px var(--spacing-lg);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius-sm);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     cursor: pointer;
@@ -112,16 +124,45 @@
     gap: var(--spacing-xs);
     transition: var(--transition-fast);
     font-family: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color-white);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.footer-contact-btn:hover::before {
+    left: 0;
 }
 
 .footer-contact-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-primary);
+    color: var(--color-dark);
+    border-color: var(--color-white);
+}
+
+.footer-contact-btn:hover .telegram-icon {
+    content: url('/assets/svg/logo-telegram-logo.svg');
+}
+
+.footer-contact-btn span {
+    position: relative;
+    z-index: 2;
 }
 
 .telegram-icon {
     width: var(--spacing-md);
     height: var(--spacing-md);
+    position: relative;
+    z-index: 2;
 }
 
 .footer-status {

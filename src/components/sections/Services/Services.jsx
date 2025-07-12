@@ -27,7 +27,7 @@ const Services = () => {
     ];
 
     return (
-        <section className="services">
+        <section id="services" className="services">
             <div className="services-container">
                 <div className="services-content">
                     <h2 className="services-title">Чем могу вам помочь?</h2>
@@ -36,7 +36,7 @@ const Services = () => {
                         {servicesData.map((service) => (
                             <div key={service.id} className="service-card">
                                 <div className="service-image">
-                                    <img src={service.image} alt={service.title} />
+                                    <img src={service.image} alt={service.title} draggable="false" />
                                 </div>
                                 <div className="service-content">
                                     <h3 className="service-title">{service.title}</h3>

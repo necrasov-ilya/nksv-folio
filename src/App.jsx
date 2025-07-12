@@ -5,6 +5,7 @@ import Preloader from './components/common/Preloader/Preloader.jsx';
 import Skills from './components/sections/Skills/Skills.jsx';
 import Divider from './components/layout/Divider/Divider.jsx';
 import Services from './components/sections/Services/Services.jsx';
+import Projects from './components/sections/Projects/Projects.jsx';
 import Footer from './components/layout/Footer/Footer.jsx';
 import './App.css';
 
@@ -18,10 +19,10 @@ function App() {
     return (
         <div className="App">
             {isLoading && <Preloader onComplete={handlePreloaderComplete}/>}
+            <div id="home"></div>
             <Header />
             <About />
             <Skills />
-            <Divider />
             <Services />
             <Footer />
         </div>

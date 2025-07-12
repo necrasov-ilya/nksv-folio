@@ -3,7 +3,7 @@ import './About.css';
 
 const About = () => {
     return (
-        <section className="about">
+        <section id="about" className="about">
             <div className="about-content">
                 <div className="about-text">
                     <h2 className="about-title">Илья Некрасов</h2>
@@ -12,12 +12,12 @@ const About = () => {
                         Lorem Ipsum Lorem ipsumLorem Ipsum
                     </p>
                     <button className="about-cta-button">
-                        <img src="/assets/svg/telegram-logo.svg" alt="Telegram" className="telegram-icon" />
+                        <img src="/assets/svg/light-telegram-logo.svg" id="about" alt="Telegram" className="telegram-icon" />
                         Связаться со мной
                     </button>
                 </div>
                 <div className="about-image">
-                    <img src="/assets/images/nksv-portrait.png" alt="Портрет NKSV" className="portrait" />
+                    <img src="/assets/images/nksv-portrait.png" draggable="false" alt="Портрет NKSV" className="portrait" />
                 </div>
             </div>
         </section>
