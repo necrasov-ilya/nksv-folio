@@ -64,6 +64,12 @@
   /* Градиенты */
   --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
 
+  /* Система наслоения секций */
+  --section-overlap: 60px;
+  --section-border-radius: 60px;
+  --section-padding-top: 80px;
+  --section-padding-bottom: 120px;
+
   /* Высота элементов */
   --header-logo-height: 50px;
   --mobile-button-size: 64px;

@@ -1,6 +1,11 @@
 .services {
     background: var(--color-light-gray);
-    padding: var(--spacing-xl) 0;
+    padding: var(--section-padding-top) 0 var(--section-padding-bottom) 0;
+    position: relative;
+    margin-top: calc(-1 * var(--section-overlap));
+    border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
+    box-shadow: var(--shadow-heavy);
+    z-index: 1;
 }
 
 .services-container {
