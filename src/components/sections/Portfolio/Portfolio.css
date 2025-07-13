@@ -4,7 +4,6 @@
     position: relative;
     margin-top: calc(-1 * var(--section-overlap));
     border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
-    box-shadow: var(--shadow-heavy);
     z-index: 2;
 }
 
