@@ -5,7 +5,7 @@ import Preloader from './components/common/Preloader/Preloader.jsx';
 import Skills from './components/sections/Skills/Skills.jsx';
 import Services from './components/sections/Services/Services.jsx';
 import Portfolio from './components/sections/Portfolio/Portfolio.jsx';
-import Projects from './components/sections/Projects/Projects.jsx';
+import FAQ from './components/sections/FAQ/FAQ.jsx';
 import Footer from './components/layout/Footer/Footer.jsx';
 import './App.css';
 
@@ -25,6 +25,7 @@ function App() {
             <Skills />
             <Services />
             <Portfolio />
+            <FAQ />
             <Footer />
         </div>
     );

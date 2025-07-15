@@ -118,7 +118,9 @@
 }
 
 @media (max-width: 768px) {
+
     .about-content {
+        margin-top: calc(-1 * var(--section-overlap));
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
