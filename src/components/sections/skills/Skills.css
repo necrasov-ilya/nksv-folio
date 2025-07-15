@@ -5,6 +5,39 @@
     border-radius: var(--section-border-radius) var(--section-border-radius) 0 0;
     z-index: 1;
     overflow: hidden;
+    box-shadow:
+        0 0 100px rgba(139, 92, 246, 0.1),
+        0 0 200px rgba(59, 130, 246, 0.05),
+        inset 0 0 50px rgba(6, 182, 212, 0.02);
+}
+
+.neon-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+    filter: contrast(1.2) brightness(1.1);
+}
+
+.neon-path {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor);
+}
+
+.neon-glow {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.5;
+    filter: blur(8px);
 }
 
 .skills-content {
@@ -367,4 +400,3 @@
         -webkit-line-clamp: 4;
     }
 }
-

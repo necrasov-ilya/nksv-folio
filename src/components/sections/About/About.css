@@ -44,7 +44,7 @@
 }
 
 .about-cta-button {
-    background: var(--gradient-primary);
+    background: var(--color-primary);
     color: var(--color-white);
     border: none;
     padding: 16px 56px;
