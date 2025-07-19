@@ -7,21 +7,21 @@ const Services = () => {
             id: 1,
             title: "Веб-разработка",
             description: "Создание современных адаптивных веб-сайтов и веб-приложений с использованием актуальных технологий",
-            image: "/assets/images/services/web-development.png",
+            image: "/nksv-folio/assets/images/services/web-development.png",
             details: "React, Vue.js, Node.js"
         },
         {
             id: 2,
             title: "UI/UX Дизайн",
             description: "Проектирование интуитивных пользовательских интерфейсов с фокусом на удобство и эстетику",
-            image: "/assets/images/services/ux-ui-design.png",
+            image: "/nksv-folio/assets/images/services/ux-ui-design.png",
             details: "Figma, Adobe XD, Sketch"
         },
         {
             id: 3,
             title: "Техническая консультация",
             description: "Помощь в выборе технологий, архитектуры проекта и оптимизации существующих решений",
-            image: "/assets/images/services/consulting.png",
+            image: "/nksv-folio/assets/images/services/consulting.png",
             details: "Анализ, планирование, рекомендации"
         }
     ];

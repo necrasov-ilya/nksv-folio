@@ -17,7 +17,7 @@ const About = () => {
                     </button>
                 </div>
                 <div className="about-image">
-                    <img src="/assets/images/nksv-portrait.png" draggable="false" alt="Портрет NKSV" className="portrait" />
+                    <img src="/nksv-folio/assets/images/nksv-portrait.png" draggable="false" alt="Портрет NKSV" className="portrait" />
                 </div>
             </div>
         </section>

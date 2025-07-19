@@ -13,7 +13,7 @@ const Footer = () => {
                     <div className="footer-main">
                         <div className="footer-brand">
                             <div className="footer-logo-section">
-                                <img src="/assets/svg/light-nksv-logo.svg" alt="NKSV Logo" className="footer-logo" draggable="false" />
+                                <img src="/nksv-folio/assets/svg/light-nksv-logo.svg" alt="NKSV Logo" className="footer-logo" draggable="false" />
                                 <span className="footer-brand-name">NKSV_ILYA</span>
                             </div>
 
@@ -27,7 +27,7 @@ const Footer = () => {
 
                         <div className="footer-actions">
                             <button className="footer-contact-btn">
-                                <img src="/assets/svg/light-telegram-logo.svg" alt="Telegram" className="telegram-icon" />
+                                <img src="/nksv-folio/assets/svg/light-telegram-logo.svg" alt="Telegram" className="telegram-icon" />
                                 <span>Связаться со мной</span>
                             </button>
                             <div className="footer-status">

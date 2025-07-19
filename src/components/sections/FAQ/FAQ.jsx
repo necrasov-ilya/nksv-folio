@@ -41,7 +41,7 @@ const FAQ = () => {
             <div className="faq-container">
                 <div className="faq-content">
                     <div className="faq-image">
-                        <img src="/assets/images/faq/left-block.png" alt="FAQ illustration" draggable="false" />
+                        <img src="/nksv-folio/assets/images/faq/left-block.png" alt="FAQ illustration" draggable="false" />
                     </div>
                     <div className="faq-main">
                         <h2 className="faq-title">Часто задаваемые вопросы</h2>

@@ -19,7 +19,7 @@ const Header = () => {
             <header className="header">
                 <div className="header-content">
                     <div className="logo-section">
-                        <img src="/assets/svg/dark-nksv-logo.svg" alt="NKSV Logo" className="logo" draggable="false" />
+                        <img src="/nksv-folio/assets/svg/dark-nksv-logo.svg" alt="NKSV Logo" className="logo" draggable="false" />
                         <span className="brand-name">NKSV_ILYA</span>
                     </div>
                     <nav className="nav-section">
@@ -28,7 +28,7 @@ const Header = () => {
                         <a href="#projects" className="nav-link" draggable="false" onClick={(e) => handleSmoothNavigation(e, 'projects')}><span>Проекты</span></a>
                         <a href="#contact" className="nav-link" draggable="false" onClick={(e) => handleSmoothNavigation(e, 'contact')}><span>Контакты</span></a>
                         <button className="cta-button">
-                            <img src="/assets/svg/logo-telegram-logo.svg" alt="Telegram" className="telegram-icon" />
+                            <img src="/nksv-folio/assets/svg/logo-telegram-logo.svg" alt="Telegram" className="telegram-icon" />
                             <span>Связаться со мной</span>
                         </button>
                     </nav>
@@ -56,7 +56,7 @@ const Header = () => {
                     <a href="#projects" className="mobile-nav-link" onClick={(e) => handleMobileNavClick(e, 'projects')}>Проекты</a>
                     <a href="#contact" className="mobile-nav-link" onClick={(e) => handleMobileNavClick(e, 'contact')}>Контакты</a>
                     <button className="mobile-cta-button" onClick={toggleMobileMenu}>
-                        <img src="/assets/svg/telegram-logo.svg" alt="Telegram" className="telegram-icon" />
+                        <img src="/nksv-folio/assets/svg/telegram-logo.svg" alt="Telegram" className="telegram-icon" />
                         Связаться со мной
                     </button>
                 </div>

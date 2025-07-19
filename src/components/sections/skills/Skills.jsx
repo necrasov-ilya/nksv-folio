@@ -13,53 +13,53 @@ const Skills = () => {
 
         // Функция для создания пути обводки
         const createBorderPath = () => {
-            const rect = skillsElement.getBoundingClientRect();
-            const topRadius = 70;
-            const bottomRadius = 0;
-            const offset = 0;
+            // const rect = skillsElement.getBoundingClientRect();
+            // const topRadius = 70;
+            // const bottomRadius = 0;
+            // const offset = 0;
 
-            const x = offset;
-            const y = offset;
-            const width = rect.width - offset * 2;
-            const height = rect.height - offset * 2;
-            const rTop = topRadius;
-            const rBottom = bottomRadius;
+            // const x = offset;
+            // const y = offset;
+            // const width = rect.width - offset * 2;
+            // const height = rect.height - offset * 2;
+            // const rTop = topRadius;
+            // const rBottom = bottomRadius;
 
-            // Создаем путь с разными радиусами сверху и снизу
-            const pathData = `
-                M ${x + rTop} ${y}
-                L ${x + width - rTop} ${y}
-                Q ${x + width} ${y} ${x + width} ${y + rTop}
-                L ${x + width} ${y + height - rBottom}
-                ${rBottom > 0 ? `Q ${x + width} ${y + height} ${x + width - rBottom} ${y + height}` : `L ${x + width} ${y + height}`}
-                L ${x + rBottom} ${y + height}
-                ${rBottom > 0 ? `Q ${x} ${y + height} ${x} ${y + height - rBottom}` : `L ${x} ${y + height}`}
-                L ${x} ${y + rTop}
-                Q ${x} ${y} ${x + rTop} ${y}
-                Z
-            `;
+            // // Создаем путь с разными радиусами сверху и снизу
+            // const pathData = `
+            //     M ${x + rTop} ${y}
+            //     L ${x + width - rTop} ${y}
+            //     Q ${x + width} ${y} ${x + width} ${y + rTop}
+            //     L ${x + width} ${y + height - rBottom}
+            //     ${rBottom > 0 ? `Q ${x + width} ${y + height} ${x + width - rBottom} ${y + height}` : `L ${x + width} ${y + height}`}
+            //     L ${x + rBottom} ${y + height}
+            //     ${rBottom > 0 ? `Q ${x} ${y + height} ${x} ${y + height - rBottom}` : `L ${x} ${y + height}`}
+            //     L ${x} ${y + rTop}
+            //     Q ${x} ${y} ${x + rTop} ${y}
+            //     Z
+            // `;
 
-            return pathData.trim();
+            // return pathData.trim();
         };
 
-        // Устанавливаем размеры SVG
-        const updateSVG = () => {
-            const rect = skillsElement.getBoundingClientRect();
-            svg.setAttribute('width', rect.width);
-            svg.setAttribute('height', rect.height);
-            svg.setAttribute('viewBox', `0 0 ${rect.width} ${rect.height}`);
+        // // Устанавливаем размеры SVG
+        // const updateSVG = () => {
+        //     const rect = skillsElement.getBoundingClientRect();
+        //     svg.setAttribute('width', rect.width);
+        //     svg.setAttribute('height', rect.height);
+        //     svg.setAttribute('viewBox', `0 0 ${rect.width} ${rect.height}`);
 
-            const pathData = createBorderPath();
+        //     const pathData = createBorderPath();
 
-            // Обновляем все пути
-            const paths = svg.querySelectorAll('path');
-            paths.forEach(path => {
-                path.setAttribute('d', pathData);
-            });
+        //     // Обновляем все пути
+        //     const paths = svg.querySelectorAll('path');
+        //     paths.forEach(path => {
+        //         path.setAttribute('d', pathData);
+        //     });
 
-            // Обновляем градиенты для нового размера
-            animateGradients();
-        };
+        //     // Обновляем градиенты для нового размера
+        //     animateGradients();
+        // };
 
         // Анимация градиентов
         const animateGradients = () => {
@@ -249,11 +249,11 @@ const Skills = () => {
 
         // Инициализация
         createSVGContent();
-        updateSVG();
+        // updateSVG();
 
         // Обновляем при изменении размера окна
         const handleResize = () => {
-            updateSVG();
+            // updateSVG();
         };
 
         window.addEventListener('resize', handleResize);
@@ -272,7 +272,7 @@ const Skills = () => {
                 <h2 className="skills-title">Обо мне</h2>
                 <div className="skills-grid">
                     <div className="photography-card">
-                        <img src="/assets/images/skills/photography.png" alt="Photography Background" className="skill-bg" />
+                        <img src="/nksv-folio/assets/images/skills/photography.png" alt="Photography Background" className="skill-bg" />
                         <div className="skill-overlay"></div>
                         <h3 className="skill-title">Фотография</h3>
                         <div className="skill-description">
@@ -285,7 +285,7 @@ const Skills = () => {
                         </div>
                     </div>
                     <div className="design-card">
-                        <img src="/assets/images/skills/design.png" alt="Design Background" className="skill-bg" />
+                        <img src="/nksv-folio/assets/images/skills/design.png" alt="Design Background" className="skill-bg" />
                         <div className="skill-overlay"></div>
                         <h3 className="skill-title">Дизайн</h3>
                         <div className="skill-description">
@@ -298,7 +298,7 @@ const Skills = () => {
                         </div>
                     </div>
                     <div className="frontend-card">
-                        <img src="/assets/images/skills/frontend.png" alt="Frontend Background" className="skill-bg" />
+                        <img src="/nksv-folio/assets/images/skills/frontend.png" alt="Frontend Background" className="skill-bg" />
                         <div className="skill-overlay"></div>
                         <h3 className="skill-title">Frontend разработка</h3>
                         <div className="skill-description">
