@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Header from './components/layout/Header/Header.jsx';
 import About from './components/sections/About/About.jsx';
 import Preloader from './components/common/Preloader/Preloader.jsx';
-import Skills from './components/sections/Skills/Skills.jsx';
+import Skills from './components/sections/skills/Skills.jsx';
 import Services from './components/sections/Services/Services.jsx';
 import Portfolio from './components/sections/Portfolio/Portfolio.jsx';
 import FAQ from './components/sections/FAQ/FAQ.jsx';
